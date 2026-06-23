@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nigerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E" />
+      <stop offset="100%" stop-color="#115E59" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F97316" />
+      <stop offset="100%" stop-color="#EA580C" />
+    </linearGradient>
+  </defs>
+
+  <!-- Stylized Icon / Radar / Eye of Veille -->
+  <g transform="translate(10, 10)">
+    <!-- Outer Orange Ring -->
+    <circle cx="30" cy="30" r="28" fill="none" stroke="url(#orangeGrad)" stroke-width="4" />
+    <!-- Inner Green Ring -->
+    <circle cx="30" cy="30" r="20" fill="none" stroke="url(#nigerGrad)" stroke-width="3" stroke-dasharray="10 4" />
+    <!-- Niger Map Outline (Stylized Circle Center or Sun) -->
+    <circle cx="30" cy="30" r="10" fill="url(#orangeGrad)" />
+    <!-- Radar Line -->
+    <line x1="30" y1="30" x2="48" y2="12" stroke="#0F766E" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Site Title -->
+  <g transform="translate(85, 40)">
+    <text font-family="'Outfit', 'Inter', sans-serif" font-weight="900" font-size="22" fill="#0F766E" letter-spacing="1">NIGER INFO</text>
+    <text font-family="'Outfit', 'Inter', sans-serif" font-weight="900" font-size="22" fill="#F97316" x="140" letter-spacing="1">VEILLE</text>
+    <text font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" y="20" letter-spacing="2">PLATEFORME DE VEILLE CITOYENNE &amp; OFFICIELLE</text>
+  </g>
+</svg>

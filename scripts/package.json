@@ -1,0 +1,13 @@
+{
+  "name": "niger-info-veille-collector",
+  "version": "1.0.0",
+  "description": "Script Node.js d'agrégation de nouvelles sur le Niger pour la plateforme Niger Info Veille.",
+  "main": "collect-news.js",
+  "scripts": {
+    "collect": "node collect-news.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "private": true
+}

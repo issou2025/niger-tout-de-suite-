@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO - Balises de base -->
+  <title>Niger Info Veille - Actualités, communiqués et informations sur le Niger</title>
+  <meta name="description" content="Suivez les dernières informations fiables sur le Niger : actualités, communiqués officiels, économie, marchés publics, santé, agriculture, météo, humanitaire et développement.">
+  <meta name="keywords" content="Niger, actualités Niger, Niamey, gouvernement Niger, économie Niger, marchés publics Niger, santé Niger, agriculture Niger, météo Niger, humanitaire Niger">
+  <meta name="author" content="Niger Info Veille">
+  <link rel="canonical" href="https://nigerinfoveille.github.io/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nigerinfoveille.github.io/">
+  <meta property="og:title" content="Niger Info Veille - Actualités et communiqués du Niger">
+  <meta property="og:description" content="Suivez en un seul endroit les informations fiables et vérifiées du Niger issues des ministères, médias publics et organisations internationales.">
+  <meta property="og:image" content="https://nigerinfoveille.github.io/assets/img/placeholder-news.svg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://nigerinfoveille.github.io/">
+  <meta property="twitter:title" content="Niger Info Veille - Actualités et communiqués du Niger">
+  <meta property="twitter:description" content="Suivez en un seul endroit les informations fiables et vérifiées du Niger issues des ministères, médias publics et organisations internationales.">
+  <meta property="twitter:image" content="https://nigerinfoveille.github.io/assets/img/placeholder-news.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+
+  <!-- Manifest PWA (Optionnel) -->
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Polices Google Fonts Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Structured Data JSON-LD (SEO) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Niger Info Veille",
+      "url": "https://nigerinfoveille.github.io/",
+      "description": "Agrégateur et portail de veille informationnelle sur le Niger.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://nigerinfoveille.github.io/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- 1. Bandeau d'alerte critique supérieure -->
+  <div id="critical-alert-banner" class="critical-alert-banner" role="alert">
+    <!-- Rempli dynamiquement en JS si article importance 5 récent -->
+  </div>
+
+  <!-- 2. Header / Navigation supérieure -->
+  <header class="main-header">
+    <div class="container header-container">
+      <!-- Logo et titre du site -->
+      <a href="#" class="logo-link" aria-label="Page d'accueil de Niger Info Veille">
+        <img src="assets/img/logo.svg" alt="Niger Info Veille Logo" class="site-logo">
+      </a>
+
+      <!-- Menu de navigation principal -->
+      <nav id="header-nav" class="header-nav" aria-label="Navigation principale">
+        <ul class="nav-menu">
+          <li><a href="#" class="nav-menu-link cat-nav-btn active" data-category="" id="nav-home">Accueil</a></li>
+          <li><a href="#" class="nav-menu-link cat-nav-btn" data-category="alaune" id="nav-alaune">À la une</a></li>
+          <li><a href="#" class="nav-menu-link cat-nav-btn" data-category="Gouvernement" id="nav-gouv">Gouvernement</a></li>
+          <li><a href="#" class="nav-menu-link cat-nav-btn" data-category="Économie" id="nav-eco">Économie</a></li>
+          <li><a href="#" class="nav-menu-link cat-nav-btn" data-category="Marchés publics" id="nav-marches">Marchés publics</a></li>
+          <li><a href="#" class="nav-menu-link cat-nav-btn" data-category="Santé" id="nav-sante">Santé</a></li>
+          <li><a href="#" class="nav-menu-link cat-nav-btn" data-category="Sécurité" id="nav-secu">Sécurité</a></li>
+          <li><a href="#" class="nav-menu-link cat-nav-btn" data-category="Agriculture" id="nav-agri">Agriculture</a></li>
+          <li><a href="#" class="nav-menu-link cat-nav-btn" data-category="Météo" id="nav-meteo">Météo</a></li>
+          <li><a href="#" class="nav-menu-link cat-nav-btn" data-category="Humanitaire" id="nav-huma">Humanitaire</a></li>
+          <li><a href="#" class="nav-menu-link cat-nav-btn" data-category="Diaspora" id="nav-diaspora">Diaspora</a></li>
+          <li><a href="#sources-section" class="nav-menu-link" id="nav-sources">Sources</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions de l'en-tête (Thème & Menu Mobile) -->
+      <div class="header-actions">
+        <button id="theme-toggle-btn" class="btn-system" aria-label="Basculer le mode sombre" title="Changer de thème">🌙</button>
+        <button id="menu-toggle-btn" class="btn-system menu-toggle-btn" aria-label="Ouvrir le menu de navigation" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Section Hero (Titre & Recherche) -->
+  <section class="hero-section">
+    <div class="container">
+      <span class="hero-subtitle">Veille Citoyenne &amp; Institutionnelle</span>
+      <h1 class="hero-title">NIGER INFO VEILLE</h1>
+      <p class="hero-description">
+        Suivez en un seul endroit les dernières informations fiables sur le Niger : communiqués officiels, actualités, économie, marchés publics, santé, agriculture, météo et rapports humanitaires.
+      </p>
+
+      <!-- Barre de recherche rapide -->
+      <div class="hero-search-container">
+        <div class="search-input-wrapper">
+          <span class="search-input-icon">🔍</span>
+          <input type="text" id="search-input" class="hero-search-input" placeholder="Rechercher par mot-clé, titre, source, région, tag..." aria-label="Rechercher des articles">
+          <button id="btn-clear-search" class="btn-clear-search" aria-label="Effacer la recherche" title="Effacer">✕</button>
+        </div>
+      </div>
+
+      <!-- Compteurs et statistiques rapides -->
+      <div class="hero-stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">📥</div>
+          <div class="stat-info">
+            <span id="stat-total-news" class="stat-number">--</span>
+            <span class="stat-label">Infos collectées</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">📡</div>
+          <div class="stat-info">
+            <span id="stat-total-sources" class="stat-number">--</span>
+            <span class="stat-label">Sources surveillées</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">⚡</div>
+          <div class="stat-info">
+            <span id="stat-news-today" class="stat-number">--</span>
+            <span class="stat-label">Aujourd'hui (24h)</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">🔄</div>
+          <div class="stat-info">
+            <span id="stat-last-collect" class="stat-number">--</span>
+            <span class="stat-label">Dernière collecte</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catégories rapides sous la recherche -->
+      <div class="quick-categories-nav">
+        <button class="cat-nav-btn active" data-category="">Tout</button>
+        <button class="cat-nav-btn" data-category="Gouvernement">Gouvernement</button>
+        <button class="cat-nav-btn" data-category="Économie">Économie</button>
+        <button class="cat-nav-btn" data-category="Marchés publics">Marchés publics</button>
+        <button class="cat-nav-btn" data-category="Santé">Santé</button>
+        <button class="cat-nav-btn" data-category="Agriculture">Agriculture</button>
+        <button class="cat-nav-btn" data-category="Météo">Météo</button>
+        <button class="cat-nav-btn" data-category="Humanitaire">Humanitaire</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Section Filtres dynamiques -->
+  <section class="filters-section">
+    <div class="container filters-container">
+      <!-- Méta résultats -->
+      <div id="results-count" class="results-meta">
+        Chargement des informations...
+      </div>
+
+      <!-- Contrôles de filtrage combinés -->
+      <div class="filters-controls">
+        <!-- Filtre Catégorie -->
+        <div class="select-wrapper">
+          <select id="filter-category" class="filter-select" aria-label="Filtrer par catégorie">
+            <option value="">Toutes les catégories</option>
+            <!-- Rempli dynamiquement -->
+          </select>
+        </div>
+
+        <!-- Filtre Source -->
+        <div class="select-wrapper">
+          <select id="filter-source" class="filter-select" aria-label="Filtrer par source">
+            <option value="">Toutes les sources</option>
+            <!-- Rempli dynamiquement -->
+          </select>
+        </div>
+
+        <!-- Filtre Date -->
+        <div class="select-wrapper">
+          <select id="filter-date" class="filter-select" aria-label="Filtrer par date">
+            <option value="all">Toutes les dates</option>
+            <option value="today">Aujourd'hui</option>
+            <option value="week">Cette semaine</option>
+            <option value="month">Ce mois</option>
+          </select>
+        </div>
+
+        <!-- Filtre Région -->
+        <div class="select-wrapper">
+          <select id="filter-region" class="filter-select" aria-label="Filtrer par région">
+            <option value="">Toutes les régions</option>
+            <option value="Agadez">Agadez</option>
+            <option value="Diffa">Diffa</option>
+            <option value="Dosso">Dosso</option>
+            <option value="Maradi">Maradi</option>
+            <option value="Niamey">Niamey</option>
+            <option value="Tahoua">Tahoua</option>
+            <option value="Tillabéri">Tillabéri</option>
+            <option value="Zinder">Zinder</option>
+            <option value="Niger">Niger (National)</option>
+          </select>
+        </div>
+
+        <!-- Filtre Importance -->
+        <div class="select-wrapper">
+          <select id="filter-importance" class="filter-select" aria-label="Filtrer par importance">
+            <option value="">Toutes les importances</option>
+            <option value="5">Majeure (Niveau 5)</option>
+            <option value="4">Très importante (Niveau 4+)</option>
+            <option value="3">Importante (Niveau 3+)</option>
+          </select>
+        </div>
+
+        <!-- Tri -->
+        <div class="select-wrapper">
+          <select id="filter-sort" class="filter-select" aria-label="Trier les résultats">
+            <option value="recent">Plus récent</option>
+            <option value="ancien">Plus ancien</option>
+            <option value="importance">Plus important</option>
+            <option value="source">Source (A-Z)</option>
+            <option value="category">Catégorie (A-Z)</option>
+          </select>
+        </div>
+
+        <!-- Filtre favoris -->
+        <button id="filter-bookmarks" class="btn-filter-bookmark" aria-label="Afficher uniquement les favoris">
+          🤍 Filtrer favoris
+        </button>
+
+        <!-- Réinitialisation -->
+        <button class="btn-reset-filters" onclick="Search.resetFilters()" id="btn-reset-main-filters">Réinitialiser</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Main content layout (Actualités et Sidebar) -->
+  <main class="container">
+    <div class="news-layout">
+      <!-- Grille d'actualités -->
+      <section class="news-section">
+        <div class="news-section-header">
+          <h2 id="news-section-title" class="section-title">Dernières informations</h2>
+        </div>
+
+        <!-- Grille principale de cartes -->
+        <div id="news-grid" class="news-grid">
+          <!-- Rempli en JS par skeleton, puis par les actualités -->
+        </div>
+
+        <!-- Pagination / Charger plus -->
+        <div class="load-more-container">
+          <button id="btn-load-more" class="btn btn-outline btn-load-more" style="display: none;">
+            Charger plus d'articles
+          </button>
+        </div>
+      </section>
+
+      <!-- Colonne latérale (Sidebar) -->
+      <aside class="news-sidebar" aria-label="Statistiques et conseils">
+        <!-- Widget Résumé de la Veille -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">Résumé de la veille</h3>
+          <div class="stats-summary-list">
+            <div class="stats-summary-item">
+              <span class="stats-summary-label">Infos aujourd'hui :</span>
+              <span id="sidebar-today-count" class="stats-summary-value">--</span>
+            </div>
+            <div class="stats-summary-item">
+              <span class="stats-summary-label">Catégorie phare :</span>
+              <span id="sidebar-popular-category" class="stats-summary-value">--</span>
+            </div>
+            <div class="stats-summary-item">
+              <span class="stats-summary-label">Source la plus active :</span>
+              <span id="sidebar-active-source" class="stats-summary-value">--</span>
+            </div>
+            <div class="stats-summary-item" style="border-top: 1px dashed var(--border); padding-top: 0.5rem; margin-top: 0.5rem;">
+              <span class="stats-summary-label">Dernière maj locale :</span>
+              <span id="local-updated-time" class="stats-summary-value">--</span>
+            </div>
+          </div>
+          <!-- Bouton Actualiser les données -->
+          <button id="btn-refresh-data" class="btn btn-primary btn-sm" style="width: 100%; margin-top: 1rem;" title="Recharger les fichiers JSON locaux">
+            Actualiser les données
+          </button>
+        </div>
+
+        <!-- Widget Sources Actives -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">Sources actives</h3>
+          <ul id="sidebar-active-sources-list" class="sidebar-list">
+            <!-- Rempli par render.js -->
+          </ul>
+          <a href="#sources-section" class="btn btn-outline btn-sm" style="width: 100%; margin-top: 1rem; text-align: center;">
+            Voir toutes les sources
+          </a>
+        </div>
+
+        <!-- Widget Analytique (Répartition des informations) -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">Répartition par thèmes</h3>
+          <div id="sidebar-analytics-chart" class="analytics-chart">
+            <!-- Rempli par render.js -->
+          </div>
+        </div>
+
+        <!-- Widget Conseil / Décharge -->
+        <div class="sidebar-widget widget-tip">
+          <div class="tip-content">
+            <strong>⚠️ Conseil de vigilance :</strong><br>
+            Cette plateforme est un agrégateur. Vérifiez toujours la teneur complète de l'information sur le site de la <strong>source originale</strong> avant de la partager.
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- 6. Section Sources surveillées (40 sources) -->
+  <section id="sources-section" class="sources-section">
+    <div class="container">
+      <h2 class="section-title">Sources surveillées</h2>
+      <p class="text-muted" style="margin-top: 1rem; max-width: 700px;">
+        Nous surveillons en continu ces 40 portails institutionnels, agences publiques et médias nationaux ou internationaux pour compiler les données utiles au Niger.
+      </p>
+
+      <!-- Grille des sources -->
+      <div id="sources-grid" class="sources-grid">
+        <!-- Rempli dynamiquement en JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Section Catégories complémentaires -->
+  <section class="categories-section">
+    <div class="container">
+      <h2 class="section-title">Parcourir par catégories</h2>
+      <div class="categories-grid">
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Gouvernement">Gouvernement</button>
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Économie">Économie</button>
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Marchés publics">Marchés publics</button>
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Santé">Santé</button>
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Éducation">Éducation</button>
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Agriculture">Agriculture</button>
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Hydraulique">Hydraulique</button>
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Météo">Météo</button>
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Sécurité">Sécurité</button>
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Humanitaire">Humanitaire</button>
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Développement">Développement</button>
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Diaspora">Diaspora</button>
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Actualités">Actualités Générales</button>
+        <button class="cat-btn-full nav-menu-link-cat" data-category="Actualités régionales">Actualités Régionales</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Section À propos & Mentions légales -->
+  <section id="about-section" class="about-section">
+    <div class="container">
+      <h2 class="section-title">À propos de la plateforme</h2>
+      
+      <div class="about-content">
+        <p>
+          <strong>Niger Info Veille</strong> est une initiative technique de veille d'information publique. Le site centralise de manière automatisée les titres, communiqués officiels, alertes météo, appels d'offres publics et rapports de développement concernant la République du Niger.
+        </p>
+        <p>
+          L'objectif est d'offrir aux citoyens, décideurs, chercheurs et membres de la diaspora un portail unique, rapide et moderne pour suivre l'actualité institutionnelle et sérieuse du pays sans devoir visiter individuellement des dizaines de sites web.
+        </p>
+        <p>
+          Les données affichées sont périodiquement synchronisées via un robot de collecte autonome exécuté en arrière-plan. Aucun article de presse n'est copié dans son intégralité ; seul un résumé court indicatif est proposé pour faciliter la lecture rapide, assorti d'un renvoi direct.
+        </p>
+
+        <!-- Bloc Avertissement Légal Requis -->
+        <div class="about-legal-box">
+          <h4 class="about-legal-title">Clause de non-responsabilité et droits</h4>
+          <p class="about-legal-text">
+            Niger Info Veille est un agrégateur de veille. Les titres, résumés et liens sont fournis pour faciliter l'accès à l'information. Les contenus complets restent la propriété exclusive de leurs sources d'origine respectives. Pour lire un article complet ou vérifier la validité juridique d'un communiqué, consultez toujours la source originale.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Footer professionnel -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Colonne 1 : Identité -->
+        <div class="footer-brand">
+          <h3>NIGER INFO VEILLE</h3>
+          <p class="footer-brand-desc">
+            Le portail statique de référence pour la veille stratégique, administrative et média sur le Niger. Moderne, rapide et sans publicité.
+          </p>
+        </div>
+
+        <!-- Colonne 2 : Catégories phares -->
+        <div class="footer-col">
+          <h4>Catégories</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="nav-menu-link-cat" data-category="Gouvernement">Gouvernement &amp; Communiqués</a></li>
+            <li><a href="#" class="nav-menu-link-cat" data-category="Économie">Économie &amp; Finance</a></li>
+            <li><a href="#" class="nav-menu-link-cat" data-category="Marchés publics">Marchés Publics</a></li>
+            <li><a href="#" class="nav-menu-link-cat" data-category="Agriculture">Agriculture &amp; Élevage</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 3 : Liens utiles -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#sources-section">Sources surveillées</a></li>
+            <li><a href="#about-section">À propos</a></li>
+            <li><a href="data/rss.xml" target="_blank">Flux RSS (XML) 📻</a></li>
+            <li><a href="https://github.com/" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 4 : Contact -->
+        <div class="footer-col">
+          <h4>Contact &amp; Signalement</h4>
+          <ul class="footer-links">
+            <li>Email : veille@example.com</li>
+            <li>Niamey, République du Niger</li>
+            <li>Version : 1.0.0 (Statique)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bas du footer -->
+      <div class="footer-bottom">
+        <p class="footer-legal-mention">
+          &copy; <span id="dynamic-year">2026</span> Niger Info Veille. Tous droits réservés aux éditeurs originaux. Les résumés sont créés de bonne foi à des fins de référencement de veille.
+        </p>
+        <p>
+          Développé avec 💚 au Niger
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts JavaScript ordonnés de manière stricte pour gérer les dépendances globales -->
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/bookmarks.js"></script>
+  <script src="assets/js/render.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <!-- Script additionnel pour l'année dynamique du footer -->
+  <script>
+    const yearEl = document.getElementById('dynamic-year');
+    if (yearEl) {
+      yearEl.innerText = new Date().getFullYear();
+    }
+  </script>
+</body>
+</html>

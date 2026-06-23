@@ -1,0 +1,55 @@
+name: Mises à jour automatiques des actualités
+
+on:
+  schedule:
+    # S'exécute toutes les 15 minutes
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+    # Permet de lancer le workflow manuellement depuis GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Récupérer le code source du dépôt
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Configurer Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. Installer les dépendances dans le dossier scripts
+      - name: Install dependencies
+        run: |
+          cd scripts
+          npm ci || npm install
+
+      # 4. Exécuter le script de collecte des informations
+      - name: Run collector script
+        run: |
+          cd scripts
+          npm run collect
+
+      # 5. Committer et Pousser les modifications si les fichiers JSON ont changé
+      - name: Commit and push if data changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Vérifier si news.json ou sources.json ont été modifiés
+          git add data/news.json data/sources.json
+          
+          if git diff --staged --quiet; then
+            echo "Aucune nouvelle information collectée. Rien à committer."
+          else
+            git commit -m "bot: Mise à jour automatique des actualités et sources [skip ci]"
+            git push origin
+            echo "Données poussées sur le dépôt avec succès."
+          fi

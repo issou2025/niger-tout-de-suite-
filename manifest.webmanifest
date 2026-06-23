@@ -1,0 +1,17 @@
+{
+  "name": "Niger Info Veille",
+  "short_name": "NIV",
+  "description": "Plateforme de veille citoyenne et officielle sur la République du Niger.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#0F766E",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/img/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

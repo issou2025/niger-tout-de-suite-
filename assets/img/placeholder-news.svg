@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#F97316" stop-opacity="0.15" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" rx="12" />
+
+  <!-- Grid Pattern -->
+  <g opacity="0.25">
+    <path d="M 0,25 L 400,25 M 0,50 L 400,50 M 0,75 L 400,75 M 0,100 L 400,100 M 0,125 L 400,125 M 0,150 L 400,150 M 0,175 L 400,175 M 0,200 L 400,200 M 0,225 L 400,225" stroke="#94A3B8" stroke-width="0.5" />
+    <path d="M 25,0 L 25,250 M 50,0 L 50,250 M 75,0 L 75,250 M 100,0 L 100,250 M 125,0 L 125,250 M 150,0 L 150,250 M 175,0 L 175,250 M 200,0 L 200,250 M 225,0 L 225,250 M 250,0 L 250,250 M 275,0 L 275,250 M 300,0 L 300,250 M 325,0 L 325,250 M 350,0 L 350,250 M 375,0 L 375,250" stroke="#94A3B8" stroke-width="0.5" />
+  </g>
+
+  <!-- Central Watermarked Icon -->
+  <circle cx="200" cy="110" r="50" fill="url(#iconGrad)" />
+
+  <!-- Newspaper / Document Icon -->
+  <g transform="translate(175, 85)" stroke="#64748B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 5,0 L 45,0 C 47.7,0 50,2.3 50,5 L 50,45 C 50,47.7 47.7,50 45,50 L 5,50 C 2.3,50 0,47.7 0,45 L 0,5 C 0,2.3 2.3,0 5,0 Z" />
+    <!-- Lines of Text inside Newspaper -->
+    <line x1="10" y1="12" x2="40" y2="12" stroke="#0F766E" stroke-width="4" />
+    <line x1="10" y1="22" x2="35" y2="22" />
+    <line x1="10" y1="30" x2="40" y2="30" />
+    <line x1="10" y1="38" x2="30" y2="38" />
+  </g>
+
+  <!-- Tagline Text -->
+  <text x="200" y="195" font-family="'Inter', sans-serif" font-weight="600" font-size="12" fill="#64748B" text-anchor="middle" letter-spacing="1">NIGER INFO VEILLE</text>
+  <text x="200" y="215" font-family="'Inter', sans-serif" font-weight="400" font-size="10" fill="#94A3B8" text-anchor="middle">Image non disponible</text>
+</svg>
